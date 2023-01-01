@@ -54,14 +54,14 @@ def ejecutarPrograma(opcion):
 
    print ('Obteniendo similitud de coseno entre 2 documentos , si son iguales el valor es 1 ')
    cosine=cosine_similarity(tfidf_matrix[0:1], tfidf_matrix[99:100])
-   print cosine
+   print (cosine)
    print ('Cálculo de distancia')
    dist = 1 - cosine
    print (dist)
    print
    print ('Ángulo de separación de los documentos (grados)')
    angle_in_radians = math.acos(cosine)
-   print math.degrees(angle_in_radians)
+   print (math.degrees(angle_in_radians))
    print
    print ('Área de gráficos')
    print
