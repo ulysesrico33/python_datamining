@@ -9,6 +9,10 @@ datamining.py is very old, I want to make this code run again
 
 import os
 import math
+import nltk as nltks
+import sklearn
+from nltk.corpus import stopwords
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 def ejecutarPrograma(opcion):
@@ -29,7 +33,8 @@ def ejecutarPrograma(opcion):
            f.close()
 
    #Genera stopwords
-   #sw=stopwords.words('spanish')
+   nltks.download('stopwords')
+   sw=stopwords.words('spanish')
 
 
    #Crea los vectores ya sin stopwords y genera matriz tf-idf
